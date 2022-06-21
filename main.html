@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Камень, ножницы, бумага</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Raleway:ital,wght@0,100;0,200;0,500;0,800;1,100&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+</head>
+<body>
+  <div class="app">
+    <section class="login main">
+        <form class="form">
+        <h1 class="title">Камень, ножницы, бумага</h1>
+        <label for="login" class="login_label">Никнейм</label>
+        <input type="text" name="login" id="login" class="login_input" placeholder="Введите имя игрока">
+        <button class="login_button button">Войти</button>
+        </form>
+    </section>
+  </div>
+  <div class="error"></div>
+  <script>
+
+
+    window.application = {
+        blocks: {
+          app: document.querySelector('.app'),
+          error: document.querySelector('.error'),
+          loginInput: document.querySelector('.login_input'),
+          loginButton: document.querySelector('.login_button'),
+          form: document.querySelector('.form'),
+          nick: '',
+          gameButton: '',
+          gameText: '',
+          stone: '',
+          gameEnemy: '',
+          moveGame: '',
+          inLobbiButton: '',
+          newGame: '',
+        },
+        screens: {
+            'main': '<section class="login main"><form class="form" action=#><h1 class="title">Камень, ножницы, бумага</h1><label for="login" class="login_label">Никнейм</label><input type="text" name="login" id="login" class="login_input" placeholder="Введите имя игрока"><button class="login_button button">Войти</button></form></section><div class="error"></div>',
+            'game': '<section class="main"><h1 class="title">Игра</h1><div class="game_enemy"></div><div class="gameText"></div><div class="game_button"> <button class="button moveGame" data-move="rock">Камень</button><button class="button moveGame" data-move="scissors">Ножицы</button><button class="button moveGame" data-move="paper">Бумага</button></div></section><div class="error"></div>',
+            'lobbi': '<section class="main"><h1 class="title">Лобби</h1><div class="nick"></div><button class="lobbi_button button">Играть</button></section><div class="error"></div>',
+        },
+        renderScreen: function screen (screenName) {
+          window.application.blocks.app.innerHTML = window.application.screens[screenName];
+
+    },
+        renderBlock: function (blockName, container){
+            window.application.blocks[blockName].innerHTML = container;
+        },
+        timers: '',
+        token: '',
+        id: '',
+}
+
+
+</script>
+  <script src="./app.js"></script>
+  <script src="./play.js"></script>
+</body>
+</html>
+  

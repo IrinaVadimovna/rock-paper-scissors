@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Raleway', sans-serif;
+}
+@media (max-width: 850px){
+    .main{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .login{
+        
+
+        &_label{
+            color: grey;
+            display: block;
+            padding-top: 30px;
+            padding-bottom: 20px;
+            font-size: 14px;
+        }
+        &_input{
+            height: 32px;
+            display: block;
+            align-items: center;
+            width: 310px;
+            padding-left: 16px;
+            border: 2px solid #cccccc;
+            border-radius: 5px;
+        }
+        
+    }
+  .title {
+    padding-top: 40px;
+    font-size: 35px;
+    &_status{
+        padding-top: 20px;
+        font-size: 14px;
+    }
+  }
+  .button{
+    width: 330px;
+    margin-top: 36px;
+    height: 36px;
+    text-align: center;
+    background-color: #00619e;
+    color: white;
+    font-size: 13px;
+}
+.nick{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding-top: 26px;
+}
+.nickname{
+    font-size: 24px;
+}
+.lobbi_button{
+    margin-top: 100px;
+}
+.gameText{
+    font-size: 34px;
+    padding-top: 120px
+}
+.game_button{
+    margin-top: 50px;
+}
+.error{
+    padding-top: 20px;
+    padding-left: 32px;
+    font-size: 20px;
+}
+}
